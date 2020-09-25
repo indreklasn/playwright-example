@@ -4,7 +4,7 @@ const {
   chromium
 } = require('playwright');
 
-const stiumlateBrowser = async (browserEngine) => {
+const simulateBrowser = async (browserEngine) => {
 
   const browser = await browserEngine.launch({ headless: false, slowMo: 50 });
   const page = await browser.newPage();
@@ -15,9 +15,6 @@ const stiumlateBrowser = async (browserEngine) => {
   await browser.close();
 };
 
-stiumlateBrowser(firefox)
-stiumlateBrowser(webkit)
-stiumlateBrowser(chromium)
-
-
-
+simulateBrowser(firefox)
+simulateBrowser(webkit)
+simulateBrowser(chromium)
